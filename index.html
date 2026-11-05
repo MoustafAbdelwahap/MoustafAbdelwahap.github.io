@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Moustafa Abdelwahap – Founder portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F7F8;--surface:#FFFFFF;--ink:#14202C;--muted:#566372;--line:#D5DCE2;
+--built:#0E8576;--operated:#3556A8;--program:#B07415;--trace:#14202C;--gbg:#FFE7A3;--gink:#5A4200;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1720;--surface:#16212C;--ink:#E7EDF2;--muted:#9AA8B5;--line:#2A3846;
+--built:#3CC2AE;--operated:#7D9BEA;--program:#E2A84C;--trace:#E7EDF2;--gbg:#5A4708;--gink:#FFE7A3;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1720;--surface:#16212C;--ink:#E7EDF2;--muted:#9AA8B5;--line:#2A3846;
+--built:#3CC2AE;--operated:#7D9BEA;--program:#E2A84C;--trace:#E7EDF2;--gbg:#5A4708;--gink:#FFE7A3;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+.draft{background:var(--gbg);color:var(--gink);font-size:14px;padding:10px 24px;text-align:center}
+mark.g{background:var(--gbg);color:var(--gink);padding:0 3px;border-radius:3px}
+header.hero{padding:72px 0 24px}
+h1{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;font-size:clamp(40px,7vw,68px);line-height:1;letter-spacing:-.02em;margin:0 0 20px}
+.hero p.claim{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:500;font-size:clamp(21px,2.8vw,27px);line-height:1.3;max-width:30ch;margin:0 0 24px}
+.hero p.sub{color:var(--muted);max-width:62ch;margin:0 0 24px}
+.links{display:flex;flex-wrap:wrap;gap:10px 22px;font-weight:500}
+a{color:inherit;text-decoration-color:var(--line);text-underline-offset:3px}
+a:hover{text-decoration-color:currentColor}
+a:focus-visible{outline:2px solid var(--operated);outline-offset:3px;border-radius:2px}
+.trace-wrap{overflow-x:auto;margin:32px -8px 8px;padding:0 8px}
+.lanes{min-width:680px}
+.lane{display:grid;grid-template-columns:130px 1fr;align-items:center;height:58px;border-bottom:1px solid var(--line)}
+.lane-lb{font-size:14px;font-weight:600;display:flex;align-items:center}
+.lane-trk{position:relative;height:100%}
+.gl{position:absolute;top:0;bottom:0;border-left:1px dashed var(--line)}
+.seg{position:absolute;bottom:22px;text-decoration:none;color:var(--ink)}
+.seg-lb{position:absolute;bottom:10px;left:0;white-space:nowrap;font-size:12.5px;font-weight:500}
+.seg-lb.below{bottom:auto;top:10px}
+.seg-lb.end{left:auto;right:0}
+.seg-bar{display:block;height:7px;border-radius:4px}
+.seg-bar.built{background:var(--built)}.seg-bar.operated{background:var(--operated)}.seg-bar.program{background:var(--program)}
+.seg:hover .seg-lb,.seg:focus-visible .seg-lb{text-decoration:underline}
+.lane.axis{height:26px;border-bottom:0}
+.lanes-wrap-end{margin-bottom:56px}
+.yr{position:absolute;top:6px;font-size:12px;font-weight:600;color:var(--muted)}
+.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--muted);margin-bottom:56px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:10px;vertical-align:middle}
+.dot.built{background:var(--built)}.dot.operated{background:var(--operated)}.dot.program{background:var(--program)}
+h2{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;font-size:30px;letter-spacing:-.01em;margin:0 0 4px}
+.lead{color:var(--muted);margin:0 0 20px}
+.group{margin-bottom:56px}
+.entry{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:24px 0;border-top:1px solid var(--line)}
+.entry.built .num{background:var(--built)}.entry.operated .num{background:var(--operated)}.entry.program .num{background:var(--program)}
+.when{display:flex;flex-direction:column;gap:2px;font-size:14px;color:var(--muted)}
+.num{width:10px;height:10px;border-radius:50%;margin-bottom:8px}
+.entry h3{font-size:19px;font-weight:600;margin:0;line-height:1.35}
+.org{color:var(--muted);margin:2px 0 12px}
+dl{display:grid;grid-template-columns:96px 1fr;gap:6px 16px;margin:0}
+dt{font-size:14px;font-weight:600;color:var(--muted);padding-top:2px}
+dd{margin:0}
+.lessons ol{list-style:none;padding:0;margin:0;counter-reset:l}
+.lessons li{counter-increment:l;padding:20px 0 20px 52px;border-top:1px solid var(--line);position:relative}
+.lessons li::before{content:counter(l);position:absolute;left:0;top:16px;font:700 32px/1 "Bricolage Grotesque",sans-serif;color:var(--built)}
+.lessons h3{margin:0 0 4px;font-size:19px;font-weight:600}.lessons p{margin:0;max-width:64ch}
+.tech p{max-width:64ch}
+footer{border-top:1px solid var(--line);padding:32px 0 64px;margin-top:24px;color:var(--muted)}
+@media (max-width:640px){.entry{grid-template-columns:1fr;gap:8px}.when{flex-direction:row;flex-wrap:wrap;gap:4px 12px;align-items:center}.num{margin:0}dl{grid-template-columns:1fr;gap:0}dt{margin-top:8px}header.hero{padding-top:48px}}
+</style></head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>Moustafa Abdelwahap</h1>
+  <p class="claim">Three years building and operating startups. The first one taught me to validate before I build.</p>
+  <p class="sub">Eleven ventures, roles and programs across Japan, Germany, Romania, France and Belgium, on top of an AI and data science background from Honda Research Institute and Telecom SudParis. I’m looking for a founder’s associate role where I work next to a founder on whatever moves the company forward.</p>
+  <nav class="links" aria-label="Contact">
+    <a href="mailto:mostafamedhat.official@gmail.com">Email me</a>
+    <a href="https://www.linkedin.com/in/moustafa-medhat-abdelwahap/">LinkedIn</a>
+    <a href="https://github.com/MoustafAbdelwahap">GitHub</a>
+  </nav>
+</header>
+<div class="trace-wrap lanes-wrap-end"><div class="lanes" role="img" aria-label="Timeline of eleven ventures, roles and programmes from July 2023 to today, in three rows: founded, startup roles, and accelerators and programmes"><div class="lane"><span class="lane-lb"><span class="dot built"></span>Founded</span><div class="lane-trk"><span class="gl" style="left:14.29%"></span><span class="gl" style="left:42.86%"></span><span class="gl" style="left:71.43%"></span><a class="seg" href="#emotion" style="left:0.00%;width:4.76%"><span class="seg-lb">Emotion AI</span><span class="seg-bar built"></span></a><a class="seg" href="#soara" style="left:54.76%;width:14.29%"><span class="seg-lb">Soara</span><span class="seg-bar built"></span></a><a class="seg" href="#watchguard" style="left:83.33%;width:7.14%"><span class="seg-lb">WatchGuard</span><span class="seg-bar built"></span></a></div></div><div class="lane"><span class="lane-lb"><span class="dot operated"></span>Startup roles</span><div class="lane-trk"><span class="gl" style="left:14.29%"></span><span class="gl" style="left:42.86%"></span><span class="gl" style="left:71.43%"></span><a class="seg" href="#berlin" style="left:7.14%;width:11.90%"><span class="seg-lb">SPACE-SHIP</span><span class="seg-bar operated"></span></a><a class="seg" href="#annotation" style="left:42.86%;width:4.76%"><span class="seg-lb">MO-KA</span><span class="seg-bar operated"></span></a><a class="seg" href="#upwork" style="left:71.43%;width:11.90%"><span class="seg-lb">HR Approved Fun</span><span class="seg-bar operated"></span></a><a class="seg" href="#uma" style="left:92.86%;width:7.14%"><span class="seg-lb end">Uma Health</span><span class="seg-bar operated"></span></a></div></div><div class="lane"><span class="lane-lb"><span class="dot program"></span>Programs</span><div class="lane-trk"><span class="gl" style="left:14.29%"></span><span class="gl" style="left:42.86%"></span><span class="gl" style="left:71.43%"></span><a class="seg" href="#snee" style="left:14.29%;width:4.76%"><span class="seg-lb">SNEE</span><span class="seg-bar program"></span></a><a class="seg" href="#aifounders" style="left:19.05%;width:2.38%"><span class="seg-lb below">AI Start</span><span class="seg-bar program"></span></a><a class="seg" href="#brightlabs" style="left:26.19%;width:9.52%"><span class="seg-lb">Bright Labs</span><span class="seg-bar program"></span></a><a class="seg" href="#foundergames" style="left:42.86%;width:11.90%"><span class="seg-lb">Founder Games</span><span class="seg-bar program"></span></a></div></div><div class="lane axis"><span></span><div class="lane-trk"><span class="yr" style="left:0.00%">2023</span><span class="yr" style="left:14.29%">2024</span><span class="yr" style="left:42.86%">2025</span><span class="yr" style="left:71.43%">2026</span></div></div></div></div>
+<section class="group" aria-labelledby="h-built"><h2 id="h-built"><span class="dot built"></span>Founded</h2><p class="lead">Ventures I started.</p><article id="watchguard" class="entry built">
+  <div class="when"><span class="num"></span><span>Jun 2026 – Sep 2026</span><span class="where">Paris, part-time</span></div>
+  <div class="body">
+    <h3>Founder, WatchGuard</h3>
+    <p class="org">Smartwatch app that helps people break nail biting. <a href="https://play.google.com/store/apps/details?id=com.mystartup.watchguard">Live on Google Play</a></p>
+    <dl><dt>Problem</dt><dd>Many people have unconscious repetitive habits like nail biting or hair pulling, and I was one of them. You can’t stop what you don’t notice; by the time you realise, it has already happened.</dd><dt>What I did</dt><dd>Built it for myself first. In a five-minute setup, users show the watch their habit a few times; a small on-device model learns their motion and, within one to two seconds of the habit starting, triggers the response they chose: a vibration, an alert, or blocking a social app for an hour. Everything runs on the watch, so the data stays private. Launched it on Google Play as a freemium subscription and grew it through store optimisation and referrals, with no paid ads.</dd><dt>Result</dt><dd>I managed to break my own nail-biting habit with it. With no paid ads, in the last 180 days: 235 store visitors, 56 installs from Google Play, and $14 in first revenue from 9 paid transactions, from users in 8 countries.</dd><dt>Lesson</dt><dd>Being your own first user makes validation fast and honest.</dd></dl>
+  </div>
+</article><article id="soara" class="entry built">
+  <div class="when"><span class="num"></span><span>Jun 2025 – Dec 2025</span><span class="where">Paris</span></div>
+  <div class="body">
+    <h3>Co-founder, Soara (social initiative)</h3>
+    <p class="org">AI superconnector that matched international students with alumni who had made the same move.</p>
+    <dl><dt>Problem</dt><dd>I lived this problem. Across five study-abroad moves and about $200K in scholarships, the information I found was fragmented and often biased, and what actually helped was always one conversation with someone who had done it before. International students make decisions worth tens of thousands of euros without that.</dd><dt>What I did</dt><dd>Started Soara with a former PwC consultant as a social initiative, to make those conversations easy to find. I designed the AI agent that reads a student’s goals and worries, finds the right alumnus and sets up the conversation; humans give the advice, AI only makes the match.</dd><dt>Result</dt><dd>In the first month: 20+ one-to-one alumni connections, 200+ student conversations started, and a network of 40+ alumni across 13+ countries. I decided to shut it down in December 2025 because we couldn’t find a way to monetize it.</dd><dt>Lesson</dt><dd>A social mission still needs a business model from day one. And trust came when we stopped trying to sound expert and let alumni lead.</dd></dl>
+  </div>
+</article><article id="emotion" class="entry built">
+  <div class="when"><span class="num"></span><span>Jul 2023 – Sep 2023</span><span class="where">Japan</span></div>
+  <div class="body">
+    <h3>Founder, emotion recognition startup (Japan)</h3>
+    <p class="org">Started as my master’s thesis at Honda Research Institute.</p>
+    <dl><dt>Problem</dt><dd>Brands (restaurants, airlines, malls, apps) can’t see how customers feel in the moment.</dd><dt>What I did</dt><dd>Took my thesis research on emotion recognition from wearable biosignals and tried to turn it into a B2B product, pitching it to investors, accelerators and competitions.</dd><dt>Result</dt><dd>Won €1,500 in a BNP Paribas startup contest. I shut it down because the market wasn’t mature: most players were doing research, not consumer products.</dd><dt>Lesson</dt><dd>Compliments are not validation. Someone paying is.</dd></dl>
+  </div>
+</article></section><section class="group" aria-labelledby="h-operated"><h2 id="h-operated"><span class="dot operated"></span>Startup roles</h2><p class="lead">Startups and founders I worked with, from CTO’s right hand to Entrepreneur in Residence.</p><article id="uma" class="entry operated">
+  <div class="when"><span class="num"></span><span>Oct 2026 – present</span><span class="where">Belgium</span></div>
+  <div class="body">
+    <h3>Entrepreneur in Residence, Uma Health (Belgium)</h3>
+    <p class="org">(Peri)menopause care platform. Placed through Erasmus for Young Entrepreneurs, the EU programme that pairs new founders with an experienced entrepreneur abroad.</p>
+    <dl><dt>Problem</dt><dd>Women in (peri)menopause struggle to find a care provider who understands it, and often wait months for one.</dd><dt>What I did</dt><dd>Working with the founder on business development and growth: building B2B partnerships and scoping new business lines next to the core offer.</dd><dt>Lesson</dt><dd>Start from the customer’s pain, then pick the tech.</dd></dl>
+  </div>
+</article><article id="upwork" class="entry operated">
+  <div class="when"><span class="num"></span><span>Jan 2026 – Jun 2026</span><span class="where">Remote, part-time</span></div>
+  <div class="body">
+    <h3>Growth &amp; Marketing Lead (freelance), HR Approved Fun</h3>
+    <p class="org">Corporate-humour gift-book brand sold on Amazon. <a href="https://hrapprovedfun.com/">hrapprovedfun.com</a></p>
+    <dl><dt>Problem</dt><dd>A small publisher selling only through Amazon needed its own channel to reach buyers and capture leads.</dd><dt>What I did</dt><dd>Built the brand website and landing pages with no-code tools, wrote SEO blog articles, created quizzes to capture leads, produced AI-generated UGC-style short videos for TikTok, and set up generative-AI workflows (Midjourney, AI chatbots) for the books.</dd><dt>Result</dt><dd>90+ hours of work across two contracts.</dd><dt>Lesson</dt><dd>Small, repeatable systems compound.</dd></dl>
+  </div>
+</article><article id="annotation" class="entry operated">
+  <div class="when"><span class="num"></span><span>Jan 2025 – Mar 2025</span><span class="where">Paris</span></div>
+  <div class="body">
+    <h3>Data Analyst (freelance), MO-KA (France)</h3>
+    <p class="org">Paris startup that uses computer vision to secure self-checkout tills against fraud.</p>
+    <dl><dt>Problem</dt><dd>Their model needs to tell whether a customer’s hand is holding an item at the self-checkout, so it can flag items that weren’t scanned. Training it required 32,000 hand images labelled as full or empty.</dd><dt>What I did</dt><dd>Designed the labelling system and quality checks for the 32k hand images and ran it with two annotators.</dd><dt>Lesson</dt><dd>Good AI starts with careful, unglamorous data work.</dd></dl>
+  </div>
+</article><article id="berlin" class="entry operated">
+  <div class="when"><span class="num"></span><span>Oct 2023 – Mar 2024</span><span class="where">Munich, Germany</span></div>
+  <div class="body">
+    <h3>Data Scientist, right hand to the CTO, SPACE-SHIP (Germany)</h3>
+    <p class="org">Munich startup turning satellite (Earth Observation) data into AI insights for ports, logistics and insurance; clients include ESA and the European Commission’s Joint Research Centre. <a href="https://space-ship.world/">space-ship.world</a></p>
+    <dl><dt>Problem</dt><dd>Logistics and supply-chain clients needed reliable predictions and insights from large, messy datasets.</dd><dt>What I did</dt><dd>Worked directly with the CTO as his right hand on data science: prepared and cleaned the data, pulled out insights, and built regression and classification models with deep learning on AWS.</dd><dt>Result</dt><dd>115 hours over six months. The client’s review: “Moustafa helped us a great deal cleaning and analysing data as well as training ML models. He is very motivated and has excellent communication skills.”</dd><dt>Lesson</dt><dd>Founders want a decision, not a model.</dd></dl>
+  </div>
+</article></section><section class="group" aria-labelledby="h-program"><h2 id="h-program"><span class="dot program"></span>Accelerators & programs</h2><p class="lead">Accelerators and programmes that shaped how I build.</p><article id="foundergames" class="entry program">
+  <div class="when"><span class="num"></span><span>Jan 2025 – Jun 2025</span><span class="where">Southeast Europe</span></div>
+  <div class="body">
+    <h3>Participant, The Founder Games</h3>
+    <p class="org">Pre-accelerator for founders across Southeast Europe, competing for a share of €300K in investment and a trip to Silicon Valley. <a href="https://www.foundergames.com/">foundergames.com</a></p>
+    <dl><dt>Problem</dt><dd>I wanted to test how well I could sell, pitch and raise under real pressure, not in a classroom.</dd><dt>What I did</dt><dd>Followed the pre-accelerator programme with mentors and investors from across the region. The programme is built around timed, high-pressure challenges that mirror real founder work: selling to an audience that would never buy, handling a PR crisis, pitching a corporate buyer, making a product go viral, and defending a valuation in front of investors.</dd><dt>Lesson</dt><dd>A clear story wins a room faster than a strong spec.</dd></dl>
+  </div>
+</article><article id="brightlabs" class="entry program">
+  <div class="when"><span class="num"></span><span>Jun 2024 – Oct 2024</span><span class="where">Oradea, Romania</span></div>
+  <div class="body">
+    <h3>Selected founder, Bright Labs incubator</h3>
+    <p class="org">Residential startup incubator: founders relocate to Oradea for four months, with housing, mentors and operators in residence. <a href="https://brightlabs.build/">brightlabs.build</a></p>
+    <dl><dt>Problem</dt><dd>We needed focused time and hands-on help to turn my startup into something customers would use.</dd><dt>What I did</dt><dd>Relocated to Oradea for the programme. Set OKRs at the opening startup camp and reported on them every week, joined hackathon build cycles, and worked with experienced founders and operators on product, design and sales.</dd><dt>Lesson</dt><dd>Weekly OKRs make progress, or the lack of it, impossible to hide.</dd></dl>
+  </div>
+</article><article id="aifounders" class="entry program">
+  <div class="when"><span class="num"></span><span>Mar 2024 – Apr 2024</span><span class="where">Heilbronn, Germany</span></div>
+  <div class="body">
+    <h3>Selected participant, AI Start by Campus Founders (Germany)</h3>
+    <p class="org">Four-week on-site programme in Heilbronn for early AI founders: validate an idea by building AI prototypes, with coaching and free co-living. <a href="https://campusfounders.de/talent/ai-start/">campusfounders.de</a></p>
+    <dl><dt>Problem</dt><dd>I had a working AI model from my research, but no proof that anyone needed the product.</dd><dt>What I did</dt><dd>Worked through the programme’s workshops on defining the end user and their problem, quantifying the value proposition, testing key assumptions, prototyping with AI and pitching, with coaching between sessions.</dd><dt>Lesson</dt><dd>Programmes open doors; only customers validate.</dd></dl>
+  </div>
+</article><article id="snee" class="entry program">
+  <div class="when"><span class="num"></span><span>Jan 2024 – Mar 2024</span><span class="where">France</span></div>
+  <div class="body">
+    <h3>Student-entrepreneur, SNEE (France)</h3>
+    <p class="org">Statut National d’Étudiant-Entrepreneur: the French government programme, run by the Pépite network, that lets students and recent graduates build a company with coaching. <a href="https://www.pepite-france.fr/">pepite-france.fr</a></p>
+    <dl><dt>Problem</dt><dd>I wanted structured support to turn my research into a company in France.</dd><dt>What I did</dt><dd>Used the national student-entrepreneur status to work on my startup alongside my studies, with coaching, workshops and founder events from the Pépite network.</dd><dt>Lesson</dt><dd>Structure turns a side project into a company.</dd></dl>
+  </div>
+</article></section>
+<section class="group lessons" aria-labelledby="h-l"><h2 id="h-l">What failing taught me</h2><p class="lead">Three lessons I paid for, so the next team doesn’t have to.</p><ol><li><h3>Validate before building</h3><p>With my first startup I spent a long time building, pitching and entering contests. People liked the idea, and I even won a BNP Paribas startup contest, but nobody paid. I now talk to buyers first and build second.</p></li><li><h3>Timing is part of the product</h3><p>My emotion-AI model worked, but most of the market was still research rather than consumer products. Being able to build something doesn’t make it the right moment to sell it.</p></li><li><h3>Know when to stop, and why</h3><p>Soara reached 200+ student conversations in its first month, but we couldn’t find a way to make money from it, so I closed it. A social mission still needs a business model from day one.</p></li></ol></section>
+<section class="group tech" aria-labelledby="h-t"><h2 id="h-t">The technical edge</h2>
+<p>Before startups, I trained as a biomedical engineer and AI researcher: a master’s in Data Science (Université Paris-Est Créteil), machine learning at Honda Research Institute on 50,000 hours of wristband data for the Haru social robot, deep learning on physiological signals at the ImViA Lab, and self-supervised EEG seizure detection at Telecom SudParis. In practice, that means I can read a model’s numbers, prototype with Python and AI coding tools, and talk to engineers in their language.</p></section>
+<footer>Paris, France. <a href="mailto:mostafamedhat.official@gmail.com">mostafamedhat.official@gmail.com</a>, +33 7 80 83 45 32</footer>
+</div></body></html>
